@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Web</title>
+    <!-- <link rel="stylesheet" href="./assets/css/index.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Google: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../public/css/main.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light shadow-sm fixed-top">
+
+        <div class="container">
+            <a href="#" class="navbar-brand">
+                <img src="../public/img/logo.png" alt="logo" width="70" class="dumbways-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link fw-bold active" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/project" class="nav-link fw-bold">Add Project</a>
+                    </li>
+                </ul>
+                <a href="/contact" class="btn btn-dark fw-bold ms-auto">Contact Me</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- CARD -->
+    <div class="container bg-white shadow rounded" style="margin-top: 100px;">
+        <div class="row p-5">
+                <div class="col-md-8">
+                    <h1>Hi Welcome to my hut</h1>
+                        <p class="text-justify mt-3">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime explicabo porro minus ea dicta
+                            assumenda omnis, ullam consequatur ex vero saepe rerum magni tempora rem vitae! Reprehenderit
+                            aperiam consequatur explicabo.
+                            Odit culpa in minima praesentium veritatis velit optio asperiores hic, quos eos molestiae sunt,
+                            exercitationem voluptatem adipisci eum corrupti voluptas sint cum vel assumenda voluptates
+                            aspernatur quisquam repellat eaque. Magnam?
+                        </p>
+                        <a href="/contact" class="btn btn-dark fw-semi-bold rounded-5 mt-3 px-4">Contact Me</a>
+                        <a href="" class="btn btn-primary fw-semi-bold rounded-5 mt-3 px-4">Download CV</a>
+        
+                    <div class="link-group d-flex gap-3 mt-5 mb-5">
+                        <a href="#" class="bg-dark d-flex justify-content-center align-items-center rounded-circle"
+                            style="width: 32px; height: 32px; cursor: pointer; text-decoration: none;">
+                            <i class="fa-brands fa-linkedin-in text-white fs-5"></i></a>
+                        <a href="#" class="bg-dark d-flex justify-content-center align-items-center rounded-circle"
+                            style="width: 32px; height: 32px; cursor: pointer; text-decoration: none;">
+                            <i class="fa-brands fa-instagram text-white fs-5"></i></a>
+                        <a href="#" class="bg-dark d-flex justify-content-center align-items-center rounded-circle"
+                            style="width: 32px; height: 32px; cursor: pointer; text-decoration: none;">
+                            <i class="fa-brands fa-facebook-f text-white fs-5"></i></a>
+                        <a href="#" class="bg-dark d-flex justify-content-center align-items-center rounded-circle"
+                            style="width: 32px; height: 32px; cursor: pointer; text-decoration: none;">
+                            <i class="fa-brands fa-twitter text-white fs-5"></i></a>
+                    </div>
+                </div>
+            <div class="col-md-4">
+                <div class="card shadow">
+                        <img src="../public/img/mallard.png" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h2 class="card-title text-center fw-semi-bold">Try Widodo I. C. Putra</h2>
+                        <p class="card-text text-center">Fullstack Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- My Project -->
+    <div class="container shadow bg-white rounded p-5" style="margin-top: 100px;">
+        <h2 class="text-center fw-semi-bold">My Project</h2>
+        <div class="row mt-5">
+            <div class="project-content row p-5 gap-3 justify-content-center">
+
+                <!-- DYNAMIC CONTENT -->
+                {{range $index, $data := .renderData}}
+                <div class="project-item card shadow p-2">
+                    <img src="../public/img/{{$data.ProjectImage}}" alt="" height="250" class="card-img">
+                    <div class="card-body overflow-hidden" style="height: 195px;">
+                        <a href="/detail-project/{{$index}}" class="nav-link">
+                            <h5 class="card-title fw-semibold">{{$data.ProjectName}}</h5>
+                        </a>
+                        <h6 class="card-subtitle text-muted mb-3">Duration: {{$data.ProjectDuration}}</h6>
+                        <p class="card-text text-justify">{{$data.ProjectDescription}}.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-start gap-3">
+                        <!-- ITEM TECHNOLOGIES -->
+                        {{if eq (index $data.ProjectTechnologies 0) "checked"}}
+                        <img src="../public/icons/nodejs.svg" alt="nodejs" style="width: 32px;">
+                        {{end}}
+                        {{if eq (index $data.ProjectTechnologies 1) "checked"}}
+                        <img src="../public/icons/react-native.svg" alt="reactjs" style="width: 32px;">
+                        {{end}}
+                        {{if eq (index $data.ProjectTechnologies 2) "checked"}}
+                        <img src="../public/icons/nextjs.svg" alt="nextjs" style="width: 32px;">
+                        {{end}}
+                        {{if eq (index $data.ProjectTechnologies 3) "checked"}}
+                        <img src="../public/icons/typescript.svg" alt="typescript" style="width: 32px;">
+                        {{end}}
+                    </div>
+                    <div class="card-body align-self-center gap-3">
+                        <a href="/update-project/{{$index}}" class="btn btn-dark">edit</a>
+                        <a href="/delete-project/{{$index}}" class="btn btn-danger">delete</a>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
